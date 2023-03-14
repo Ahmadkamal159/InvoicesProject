@@ -1,0 +1,55 @@
+﻿@model InvoicesProject.Models.NWC_Subscriber_File
+
+
+
+<h1>انشاء مشترك</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NWC_Subscriber_FileId" class="control-label"></label>
+                <input asp-for="NWC_Subscriber_FileId" class="form-control" />
+                <span asp-validation-for="NWC_Subscriber_FileId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Subscriber_File_Name" class="control-label"></label>
+                <input asp-for="NWC_Subscriber_File_Name" class="form-control" />
+                <span asp-validation-for="NWC_Subscriber_File_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Subscriber_File_City" class="control-label"></label>
+                <input asp-for="NWC_Subscriber_File_City" class="form-control" />
+                <span asp-validation-for="NWC_Subscriber_File_City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Subscriber_File_Area" class="control-label"></label>
+                <input asp-for="NWC_Subscriber_File_Area" class="form-control" />
+                <span asp-validation-for="NWC_Subscriber_File_Area" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Subscriber_File_Mobile" class="control-label"></label>
+                <input asp-for="NWC_Subscriber_File_Mobile" class="form-control" />
+                <span asp-validation-for="NWC_Subscriber_File_Mobile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Subscriber_File_Reasons" class="control-label"></label>
+                <input asp-for="NWC_Subscriber_File_Reasons" class="form-control" />
+                <span asp-validation-for="NWC_Subscriber_File_Reasons" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="حفظ" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-primary" asp-action="Index">قائمة المشتركين</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

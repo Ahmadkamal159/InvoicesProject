@@ -1,0 +1,55 @@
+﻿@model InvoicesProject.Models.NWC_Default_Slice_Value
+
+
+
+<h1>انشاء شريحة</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NWC_Default_Slice_ValueID" class="control-label"></label>
+                <input asp-for="NWC_Default_Slice_ValueID" class="form-control" />
+                <span asp-validation-for="NWC_Default_Slice_ValueID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Default_Slice_Value_Name" class="control-label"></label>
+                <input asp-for="NWC_Default_Slice_Value_Name" class="form-control" />
+                <span asp-validation-for="NWC_Default_Slice_Value_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Default_Slice_Value_Condtion" class="control-label"></label>
+                <input asp-for="NWC_Default_Slice_Value_Condtion" class="form-control" />
+                <span asp-validation-for="NWC_Default_Slice_Value_Condtion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Default_Slice_Value_Water_Price" class="control-label"></label>
+                <input asp-for="NWC_Default_Slice_Value_Water_Price" class="form-control" />
+                <span asp-validation-for="NWC_Default_Slice_Value_Water_Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Default_Slice_Value_Sanitation_Price" class="control-label"></label>
+                <input asp-for="NWC_Default_Slice_Value_Sanitation_Price" class="form-control" />
+                <span asp-validation-for="NWC_Default_Slice_Value_Sanitation_Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Default_Slice_Values_Reason" class="control-label"></label>
+                <input asp-for="NWC_Default_Slice_Values_Reason" class="form-control" />
+                <span asp-validation-for="NWC_Default_Slice_Values_Reason" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-primary" asp-action="Index">قائمة الشرائح</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

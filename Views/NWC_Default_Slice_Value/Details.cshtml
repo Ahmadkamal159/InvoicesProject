@@ -1,0 +1,43 @@
+﻿@model InvoicesProject.Models.NWC_Default_Slice_Value
+
+<h1>تفاصيل الشريحة</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Default_Slice_Value_Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Default_Slice_Value_Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Default_Slice_Value_Condtion)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Default_Slice_Value_Condtion)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Default_Slice_Value_Water_Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Default_Slice_Value_Water_Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Default_Slice_Value_Sanitation_Price)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Default_Slice_Value_Sanitation_Price)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Default_Slice_Values_Reason)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Default_Slice_Values_Reason)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="تعديل الشريحة" asp-route-id="@Model?.NWC_Default_Slice_ValueID">Edit</a> 
+    <a class="btn btn-primary" asp-action="Index">قائمة الشرائح</a>
+</div>

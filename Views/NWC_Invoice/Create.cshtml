@@ -1,0 +1,200 @@
+﻿@model InvoicesProject.Models.NWC_Invoice
+
+
+<h1>انشاء فاتورة</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            @*<div class="form-group">
+                <label asp-for="NWC_InvoiceID" class="control-label"></label>
+                <input readonly asp-for="NWC_InvoiceID" class="form-control" />
+                <span asp-validation-for="NWC_InvoiceID" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Year" class="control-label"></label>
+                <input asp-for="NWC_Invoice_Year" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_Year" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Rreal_Estate_TypeID" class="control-label"></label>
+                <input readonly asp-for="NWC_Rreal_Estate_TypeID" class="form-control" />
+                <span asp-validation-for="NWC_Rreal_Estate_TypeID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Subscription_FileID" class="control-label"></label>
+                <input asp-for="NWC_Subscription_FileID" class="form-control" />
+                <span asp-validation-for="NWC_Subscription_FileID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Subscriber_FileID" class="control-label"></label>
+                <input readonly asp-for="NWC_Subscriber_FileID" class="form-control" />
+                <span asp-validation-for="NWC_Subscriber_FileID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label  class="control-label"> اسم المشترك</label>
+                <input readonly id="NWC_Subscriber_File_Name" value="" class="form-control" asp-items="ViewBag.NWC_Subscriber_FileID"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Date" class="control-label"></label>
+                <input readonly asp-for="NWC_Invoice_Date" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_From" class="control-label"></label>
+                <input asp-for="NWC_Invoice_From" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_From" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_To" class="control-label"></label>
+                <input readonly asp-for="NWC_Invoice_To" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_To" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Previous_Consumption_Amount" class="control-label"></label>
+                <input readonly asp-for="NWC_Invoice_Previous_Consumption_Amount" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_Previous_Consumption_Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Current_Consumption_Amount" class="control-label"></label>
+                <input asp-for="NWC_Invoice_Current_Consumption_Amount" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_Current_Consumption_Amount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Amount_Consumption" class="control-label"></label>
+                <input readonly asp-for="NWC_Invoice_Amount_Consumption" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_Amount_Consumption" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Service_Fee" class="control-label"></label>
+                <input asp-for="NWC_Invoice_Service_Fee" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_Service_Fee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Tax_Rate" class="control-label"></label>
+                <input asp-for="NWC_Invoice_Tax_Rate" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_Tax_Rate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Is_There_Sanitation" class="control-label"></label>
+                <input readonly asp-for="NWC_Invoice_Is_There_Sanitation" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label class="control-label">عدد الوحدات</label>
+                <input id="unitsno" readonly value="" readonly class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Consumption_Value" class="control-label"></label>
+                <input readonly asp-for="NWC_Invoice_Consumption_Value" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_Consumption_Value" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Wastewater_Consumption_Value" class="control-label"></label>
+                <input readonly asp-for="NWC_Invoice_Wastewater_Consumption_Value" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_Wastewater_Consumption_Value" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Total_Invoice" class="control-label"></label>
+                <input readonly asp-for="NWC_Invoice_Total_Invoice" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_Total_Invoice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Tax_Value" class="control-label"></label>
+                <input readonly asp-for="NWC_Invoice_Tax_Value" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_Tax_Value" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Total_Bill" class="control-label"></label>
+                <input readonly asp-for="NWC_Invoice_Total_Bill" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_Total_Bill" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Invoice_Total_Reasons" class="control-label"></label>
+                <input asp-for="NWC_Invoice_Total_Reasons" class="form-control" />
+                <span asp-validation-for="NWC_Invoice_Total_Reasons" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="button" id="calculate" value="حساب القيمة" class="btn btn-primary" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="حفظ" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-primary" asp-action="Index">قائمة الفواتير</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        $(document).ready(function () {
+            $("#NWC_Subscription_FileID").change(function () {
+                var subscription = $("#NWC_Subscription_FileID").val();
+
+                $.ajax({
+                    method: "POST",
+                    dataType: "json",
+                    url: "/NWC_Invoice/GetIdentity",
+                    data: { "NWC_Subscription_FileID": subscription},
+                    success: function (jsonResult) {
+                        var NwC_Subscriber_File_Name = jsonResult.nwC_Subscriber_File_Name;
+                        var NwC_Subscriber_FileID = jsonResult.nwC_Subscriber_FileID;
+                        var NwC_Invoice_Date = jsonResult.nwC_Invoice_Date;
+                        var NwC_Invoice_Previous_Consumption_Amount = jsonResult.nwC_Invoice_Previous_Consumption_Amount;
+                        var NwC_Invoice_Is_There_Sanitation = jsonResult.nwC_Invoice_Is_There_Sanitation;
+                        var NwC_Subscription_File_Unit_No = jsonResult.nwC_Subscription_File_Unit_No;
+                        $("#NWC_Subscriber_FileID").val(NwC_Subscriber_FileID);
+                        $("#NWC_Subscriber_File_Name").val(NwC_Subscriber_File_Name);
+                        $("#NWC_Invoice_Date").val(NwC_Invoice_Date);
+                        $("#NWC_Invoice_Previous_Consumption_Amount").val(NwC_Invoice_Previous_Consumption_Amount);
+                        $("#NWC_Invoice_Is_There_Sanitation").val(NwC_Invoice_Is_There_Sanitation);
+                        $("#unitsno").val(NwC_Subscription_File_Unit_No);
+                    }
+                });
+            });
+        });
+
+        $(document).ready(function () {
+            $("#calculate").click(function () {
+            var Current_Consumption_Amount = $("#NWC_Invoice_Current_Consumption_Amount").val();
+            var NWC_Invoice_Previous_Consumption_Amount = $("#NWC_Invoice_Previous_Consumption_Amount").val();
+            var Service_Fee = $("#NWC_Invoice_Service_Fee").val();
+            var Tax_Rate = $("#NWC_Invoice_Tax_Rate").val();
+            var Is_There_Sanitation = $("#NWC_Invoice_Is_There_Sanitation").val();
+            var subscriptionid = $("#NWC_Subscription_FileID").val();
+
+                $.ajax({
+                    method: "POST",
+                    dataType: "json",
+                    url: "/NWC_Invoice/CalculateBill",
+                    data: {
+                         "subscriptionid": subscriptionid, "Current_Consumption_Amount": Current_Consumption_Amount,
+                        "Service_Fee": Service_Fee, "Tax_Rate": Tax_Rate, "Is_There_Sanitation": Is_There_Sanitation,
+                        "NWC_Invoice_Previous_Consumption_Amount": NWC_Invoice_Previous_Consumption_Amount,
+                      },
+                    success: function (json) {
+                        var NWC_Invoice_Total_Bill = json.nwC_Invoice_Total_Bill;
+                        var NWC_Invoice_Total_Invoice = json.nwC_Invoice_Total_Invoice;
+                        var NWC_Invoice_Wastewater_Consumption_Value = json.nwC_Invoice_Wastewater_Consumption_Value;
+                        var NWC_Invoice_Consumption_Value = json.nwC_Invoice_Consumption_Value;
+                        var NWC_Invoice_Amount_Consumption = json.nwC_Invoice_Amount_Consumption;
+                        var NWC_Invoice_Tax_Value = json.nwC_Invoice_Tax_Value;
+
+                        $("#NWC_Invoice_Total_Bill").val(NWC_Invoice_Total_Bill);
+                        $("#NWC_Invoice_Total_Invoice").val(NWC_Invoice_Total_Invoice);
+                        $("#NWC_Invoice_Wastewater_Consumption_Value").val(NWC_Invoice_Wastewater_Consumption_Value);
+                        $("#NWC_Invoice_Consumption_Value").val(NWC_Invoice_Consumption_Value);
+                        $("#NWC_Invoice_Amount_Consumption").val(NWC_Invoice_Amount_Consumption);
+                        $("#NWC_Invoice_Tax_Value").val(NWC_Invoice_Tax_Value);
+                    }
+                });
+            });
+        });
+
+    </script>
+}

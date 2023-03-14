@@ -1,0 +1,55 @@
+﻿@model InvoicesProject.Models.NWC_Subscription_File
+
+
+<h1>تعديل</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="NWC_Subscription_FileID" />
+            <div class="form-group">
+                <label asp-for="NWC_Subscription_File_SubscriberID" class="control-label"></label>
+                <select asp-for="NWC_Subscription_File_SubscriberID" class="form-control" asp-items="ViewBag.NWC_Subscription_File_SubscriberID"></select>
+                <span asp-validation-for="NWC_Subscription_File_SubscriberID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Rreal_Estate_TypesID" class="control-label"></label>
+                <select asp-for="NWC_Rreal_Estate_TypesID" class="form-control" asp-items="ViewBag.NWC_Rreal_Estate_TypesID"></select>
+                <span asp-validation-for="NWC_Rreal_Estate_TypesID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Subscription_File_Unit_No" class="control-label"></label>
+                <input asp-for="NWC_Subscription_File_Unit_No" class="form-control" />
+                <span asp-validation-for="NWC_Subscription_File_Unit_No" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Subscription_File_Is_There_Sanitation" class="control-label"></label>
+                <input asp-for="NWC_Subscription_File_Is_There_Sanitation" class="form-control" />
+                <span asp-validation-for="NWC_Subscription_File_Is_There_Sanitation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Subscription_File_Last_Reading_Meter" class="control-label"></label>
+                <input asp-for="NWC_Subscription_File_Last_Reading_Meter" class="form-control" />
+                <span asp-validation-for="NWC_Subscription_File_Last_Reading_Meter" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NWC_Subscription_File_Reasons" class="control-label"></label>
+                <input asp-for="NWC_Subscription_File_Reasons" class="form-control" />
+                <span asp-validation-for="NWC_Subscription_File_Reasons" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">قائمة الاشتراكات</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

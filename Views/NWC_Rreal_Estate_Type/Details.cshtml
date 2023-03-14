@@ -1,0 +1,26 @@
+﻿@model InvoicesProject.Models.NWC_Rreal_Estate_Type
+
+
+<h1>تفاصيل</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Rreal_Estate_Type_Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Rreal_Estate_Type_Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Rreal_Estate_Type_Reasons)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Rreal_Estate_Type_Reasons)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a class="btn btn-primary" asp-action="Edit" asp-route-id="@Model?.NWC_Rreal_Estate_TypeID">تعديل</a>
+    <a class="btn btn-primary" asp-action="Index">قائمة الوحدات</a>
+</div>

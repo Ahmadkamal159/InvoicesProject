@@ -1,0 +1,50 @@
+﻿@model InvoicesProject.Models.NWC_Subscription_File
+
+
+<h1>تفاصيل</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Subscription_File_Subscriber)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Subscription_File_Subscriber.NWC_Subscriber_FileId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Rreal_Estate_Types)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Rreal_Estate_Types.NWC_Rreal_Estate_TypeID)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Subscription_File_Unit_No)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Subscription_File_Unit_No)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Subscription_File_Is_There_Sanitation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Subscription_File_Is_There_Sanitation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Subscription_File_Last_Reading_Meter)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Subscription_File_Last_Reading_Meter)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Subscription_File_Reasons)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Subscription_File_Reasons)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.NWC_Subscription_FileID">تعديل</a> |
+    <a class="btn btn-primary" asp-action="Index">قائمة الاشتراكات</a>
+</div>

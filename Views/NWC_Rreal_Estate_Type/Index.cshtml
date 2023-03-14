@@ -1,0 +1,45 @@
+﻿@model IEnumerable<InvoicesProject.Models.NWC_Rreal_Estate_Type>
+
+
+
+<h1>قائمة الوحدات</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">اتشاء وحدة</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Rreal_Estate_TypeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Rreal_Estate_Type_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Rreal_Estate_Type_Reasons)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NWC_Rreal_Estate_TypeID)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Rreal_Estate_Type_Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Rreal_Estate_Type_Reasons)
+            </td>
+            <td>
+                    <a asp-action="Edit"    class="btn btn-primary"   asp-route-id="@item.NWC_Rreal_Estate_TypeID">تعديل</a>
+                    <a asp-action="Details" class="btn btn-secondary" asp-route-id="@item.NWC_Rreal_Estate_TypeID">تفاصيل</a>
+                    <a asp-action="Delete"  class="btn btn-danger"    asp-route-id="@item.NWC_Rreal_Estate_TypeID">حذف</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

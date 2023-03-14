@@ -1,0 +1,142 @@
+﻿@model IEnumerable<InvoicesProject.Models.NWC_Invoice>
+
+
+<h1>قائمة الفواتير</h1>
+
+<p>
+    <a class="btn btn-primary" asp-action="Create">انشاء فاتورة</a>
+    <a class="btn btn-danger" asp-action="PrintAllInvoices">تنزيل PDF</a>
+
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Rreal_Estate_TypeID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Subscription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoices_Subscriber_file)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_From)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_To)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Previous_Consumption_Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Current_Consumption_Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Amount_Consumption)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Service_Fee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Tax_Rate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Is_There_Sanitation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Consumption_Value)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Wastewater_Consumption_Value)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Total_Invoice)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Tax_Value)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Total_Bill)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NWC_Invoice_Total_Reasons)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Rreal_Estate_TypeID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Subscription.NWC_Subscription_FileID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoices_Subscriber_file.NWC_Subscriber_FileId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_From)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_To)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Previous_Consumption_Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Current_Consumption_Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Amount_Consumption)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Service_Fee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Tax_Rate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Is_There_Sanitation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Consumption_Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Wastewater_Consumption_Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Total_Invoice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Tax_Value)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Total_Bill)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NWC_Invoice_Total_Reasons)
+            </td>
+            <td>
+                <a asp-action="Edit"   class="btn btn-primary"   asp-route-id="@item.NWC_InvoiceID">تعديل</a>
+                <a asp-action="Details"class="btn btn-secondary" asp-route-id="@item.NWC_InvoiceID">تفاصيل</a>
+                <a asp-action="Delete" class="btn btn-danger"    asp-route-id="@item.NWC_InvoiceID">حذف</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

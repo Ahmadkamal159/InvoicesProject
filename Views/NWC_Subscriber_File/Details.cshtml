@@ -1,0 +1,44 @@
+﻿@model InvoicesProject.Models.NWC_Subscriber_File
+
+
+<h1>تفاصيل المشترك</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Subscriber_File_Name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Subscriber_File_Name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Subscriber_File_City)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Subscriber_File_City)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Subscriber_File_Area)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Subscriber_File_Area)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Subscriber_File_Mobile)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Subscriber_File_Mobile)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.NWC_Subscriber_File_Reasons)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.NWC_Subscriber_File_Reasons)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.NWC_Subscriber_FileId">تعديل</a> 
+    <a class="btn btn-primary" asp-action="Index">قائمة المشتركين</a>
+</div>
